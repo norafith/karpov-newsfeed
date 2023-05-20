@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap");
+
+:root {
+  --color-primary: #262a2f;
+  --color-accent: #ff5533;
+  --color-grey: #868686;
+  --color-white: #ffffff;
+
+  --column-width: 101px;
+  --gap-width: 20px;
+}
+
+* {
+  all: unset;
+  display: revert;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--color-white);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(16, var(--column-width));
+  gap: var(--gap-width);
+}
+
+.container {
+  max-width: 1435px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 38px;
+  padding-bottom: 150px;
+}
+
+.navigation__image {
+  width: 100%;
+}
+
+.navigation__list {
+  grid-column: 5 / -1;
+  list-style: none;
+  display: flex;
+}
+
+.navigation__item {
+  margin-right: 60px;
+}
+
+.navigation__link {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 24px;
+  transition: 0.5s;
+}
+
+.navigation__item:last-child {
+  margin-right: 0;
+}
+
+.header__navigation .navigation__link:hover,
+.header__navigation navigation__link_active {
+  color: var(--color-accent);
+}
+
+.header__navigation {
+  color: var(--color-primary);
+}
+
+.header__navigation .navigation__logo {
+  grid-column: span 4;
+  padding-right: 32px;
+}
+
+.article-category {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--color-accent);
+}
+
+.article-date {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-accent);
+}
+
+.article-source {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-grey);
+}
+
+.main-article__heading {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  color: var(--color-primary);
+  margin-bottom: 34px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.main-article__description {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--color-primary);
+  margin-bottom: 34px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.main-article__source {
+  margin-bottom: 7px;
+}
+
+.article .articles__big-column {
+  grid-column: span 9;
+}
+
+.articles__small-column {
+  grid-column: 10 / span 3;
+}
+
+.main-article {
+  display: grid;
+  grid-template-columns: repeat(9, var(--column-width));
+  gap: var(--gap-width);
+  margin-bottom: 30px;
+}
+
+.main-article:last-child {
+  margin-bottom: 0;
+}
+
+.main-article__image-container {
+  position: relative;
+  grid-column: span 3;
+  min-height: 185px;
+  max-height: 344px;
+}
+
+.main-article__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.main-article__content {
+  grid-column: 4 / -1;
+  padding-right: 63px;
+}
+
+.small-article {
+  border-left: 9px solid var(--color-primary);
+  padding-left: 11px;
+  margin-bottom: 55px;
+}
+
+.small-article:last-child {
+  margin-bottom: 0;
+}
+
+.small-article__heading {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.article-date + .article-source::before {
+  content: " · ";
+}
+
+.footer {
+  background-color: var(--color-primary);
+  padding-top: 22px;
+  padding-bottom: 62px;
+  margin-top: 135px;
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer__made {
+  color: var(--color-white);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.footer__author-link {
+  color: var(--color-accent);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer__copyright {
+  color: var(--color-grey);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.footer__navigation .navigation__logo {
+  grid-column: span 2;
+  padding-right: 58px;
+}
+
+.footer__navigation .navigation__link {
+  color: var(--color-white);
+}
+
+.footer__navigation {
+  align-items: center;
+  margin-bottom: 47px;
+}
+
+.footer__navigation .navigation__link:hover,
+.footer__navigation .navigation__link:active {
+  color: var(--color-accent);
+}
